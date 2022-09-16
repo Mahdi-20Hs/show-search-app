@@ -4,7 +4,7 @@ import {
   showStatus,
   showRating,
   showNetwork,
-  showSummery,
+  showSummary,
   imgContainer,
   infoContainer
 } from './DOM.js';
@@ -18,9 +18,9 @@ function populate(name, genres, status, rating, network, summery, img){
   showStatus.textContent = `Status: ${status}`;
   showRating.textContent = `Rating: ${rating}`;
   showNetwork.textContent = `Network: ${network}`;
-  showSummery.textContent = `Summery: ${summery}`;
+  showSummary.textContent = `Summery: ${summery}`;
 
-  infoContainer.append(showName, showGenres, showStatus, showRating, showNetwork, showSummery);
+  infoContainer.append(showName, showGenres, showStatus, showRating, showNetwork, showSummary);
 }
 
 export default populate;
