@@ -1,10 +1,13 @@
 
 import axios from 'axios'
 async function fetchTvShow(keyword){
-  keyword = keyword.replcae(' ', '+');
-  const response = await axios.get(`https://api.tvmaze.com/search/shows?q=${keyword}`);
-  return response[0];
-
+  let noSpaceKeyword = keyword.replace(' ', '+');
+  try{
+    const response = await axios.get(`https://api.tvmaze.com/singlesearch/shows?q=${noSpaceKeyword}`);
+    return response.data;
+  }catch{
+    alert('No data about the show');
+  }
 }
 
 export default fetchTvShow

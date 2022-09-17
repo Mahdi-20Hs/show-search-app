@@ -2,12 +2,14 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-size: 1.1rem;
 }
 body{
   height: 100vh;
   width: 100vw;
   display: flex;
   flex-direction: column;
+  overflow-x: hidden;
 }
 .header, .search-container{
   padding: 10px;
@@ -31,13 +33,14 @@ body{
   align-items: center;
   flex: 1;
   gap: 16px;
+  padding: 10px;
 }
 .img-container{
   background-size: cover;
-  width: 30%;
-  height:70%;
+  width: 250px;
+  height:366px;
 }
 .info-container{
   width: 60%;
-  height: 70%;
+  height: auto;
 }

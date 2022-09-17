@@ -9,20 +9,14 @@ searchBtn.addEventListener('click', async () => {
     return;
   }
   const searchValue = searchBar.value;
-  let showData;
-  try{
-    showData = await fetchTvShow(searchValue);
-  }catch{
-    alert('something wrong with fetching')
-  }
 
-  const showName = showData.show.name;
-  const showGenres = showData.show.genres;
-  const showStatus = showData.show.status;
-  const showRating = showData.show.rating;
-  const showNetwork = showData.show.network.name;
-  const showSummary = showData.show.summary;
-  const showImg = showData.show.image.medium;
-
-  populate(showName, showGenres, showStatus, showRating, showNetwork, showSummary, showImg)
+  const showData = await fetchTvShow(searchValue);
+  const showName = showData.name;
+  const showGenres = showData.genres;
+  const showStatus = showData.status;
+  const showRating = showData.rating.average;
+  const showNetwork = showData.network.name;
+  const showSummary = showData.summary;
+  const showImg = showData.image.medium;
+  populate(showName, showGenres, showStatus, showRating, showNetwork, showSummary, showImg);
 })
